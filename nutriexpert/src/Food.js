@@ -1,43 +1,44 @@
 class Food {
-    constructor(name, img, sizeType, nutrilist, constraints, relevantQuestionTags, description){
-        this.name = name
-        this.img = img
-        this.sizeType = sizeType
-        this.nutrilist = nutrilist                       //nutrient specific categories
-        this.constraints = constraints
-        this.relevantQuestionTags = relevantQuestionTags //broader categories
-        this.description = description
-    }
+  constructor(name, img, sizeType, nutrilist, constraints, relevantQuestionTags, description){
+      this.name = name
+      this.img = img
+      this.sizeType = sizeType
+      this.nutrilist = nutrilist                       //nutrient specific categories
+      this.constraints = constraints
+      this.relevantQuestionTags = relevantQuestionTags //broader categories
+      this.description = description
+  }
 }
 
 var newFoodlist = function(){return [
 
-  //Vegetables
-  new Food("Potato", "./img/Potato.jpg", "gram", {NVegetables:88}, [], ["vegetable"],"The daily recommended intake for vegetables  is 200g."),
-  new Food("Tomato", "./img/Tomato.jpg", "gram", {NVegetables:70}, [], ["vegetable"],"The daily recommended intake for vegetables  is 200g."),
-  new Food("Onion", "./img/Onion.jpg", "gram", {NVegetables:100}, [], ["vegetable"],"The daily recommended intake for vegetables  is 200g."),
-  new Food("Carrot", "./img/Carrot.jpg", "gram", {NVegetables:70}, [], ["vegetable"],"The daily recommended intake for vegetables  is 200g."),
-  new Food("Lettuce", "./img/Lettuce.jpg", "gram", {NVegetables:25}, [], ["vegetable"],"The daily recommended intake for vegetables  is 200g."),
-  new Food("Broccoli", "./img/Broccoli.jpg", "gram", {NVegetables:50}, [], ["vegetable"],"The daily recommended intake for vegetables  is 200g."),
-  new Food("Bell pepper", "./img/Bell pepper.jpg", "gram", {NVegetables:135}, [], ["vegetable"],"The daily recommended intake for vegetables  is 200g."),
-  new Food("Celery", "./img/Celery.jpg", "gram", {NVegetables:25}, [], ["vegetable"],"The daily recommended intake for vegetables  is 200g."),
-  new Food("Cucumber", "./img/Cucumber.jpg", "gram", {NVegetables:115}, [], ["vegetable"],"The daily recommended intake for vegetables  is 200g."),
-  new Food("Peas", "./img/Peas.jpg", "portion", {NLegumes:1}, [], ["vegetable", "legume"],"Eating Legumes at least once per week is recommended."),
-  new Food("Corn", "./img/Corn.jpg", "gram", {NVegetables:100, NLegumes:1}, [], ["vegetable"],"The daily recommended intake for vegetables  is 200g."),
-  new Food("Mushroom", "./img/Mushroom.jpg", "gram", {NVegetables:30}, [], ["vegetable"],"The daily recommended intake for vegetables  is 200g."),
+//Vegetables
+new Food("Potato", "./img/Potato.jpg", "gram", {NVegetables:88}, [], ["vegetable"],"The daily recommended intake for vegetables  is 200g."),
+new Food("Tomato", "./img/Tomato.jpg", "gram", {NVegetables:70}, [], ["vegetable"],"The daily recommended intake for vegetables  is 200g."),
+new Food("Onion", "./img/Onion.jpg", "gram", {NVegetables:100}, [], ["vegetable"],"The daily recommended intake for vegetables  is 200g."),
+new Food("Carrot", "./img/Carrot.jpg", "gram", {NVegetables:70}, [], ["vegetable"],"The daily recommended intake for vegetables  is 200g."),
+new Food("Lettuce", "./img/Lettuce.jpg", "gram", {NVegetables:25}, [], ["vegetable"],"The daily recommended intake for vegetables  is 200g."),
+new Food("Broccoli", "./img/Broccoli.jpg", "gram", {NVegetables:50}, [], ["vegetable"],"The daily recommended intake for vegetables  is 200g."),
+new Food("Bell pepper", "./img/Bell pepper.jpg", "gram", {NVegetables:135}, [], ["vegetable"],"The daily recommended intake for vegetables  is 200g."),
+new Food("Celery", "./img/Celery.jpg", "gram", {NVegetables:25}, [], ["vegetable"],"The daily recommended intake for vegetables  is 200g."),
+new Food("Cucumber", "./img/Cucumber.jpg", "gram", {NVegetables:115}, [], ["vegetable"],"The daily recommended intake for vegetables  is 200g."),
+new Food("Peas", "./img/Peas.jpg", "portion", {NLegumes:1}, [], ["vegetable", "legume"],"Eating Legumes at least once per week is recommended."),
+new Food("Corn", "./img/Corn.jpg", "gram", {NLegumes:1}, [], ["vegetable"],"The daily recommended intake for vegetables  is 200g."),
+new Food("Mushroom", "./img/Mushroom.jpg", "gram", {NVegetables:30}, [], ["vegetable"],"The daily recommended intake for vegetables  is 200g."),
 
-  //Other Vegetables
-  new Food("Sweet Potato", "./img/Sweet Potato.jpg", "gram", {NVegetables:130}, [], ["exotic_vegetable"],"The daily recommended intake for vegetables  is 200g."),
-  new Food("Spinach", "./img/Spinach.jpg", "gram", {NVegetables:25}, [], ["exotic_vegetable"],"The daily recommended intake for vegetables  is 200g."),
-  new Food("Cabbage", "./img/Cabbage.jpg", "gram", {NVegetables:50}, [], ["exotic_vegetable"],"The daily recommended intake for vegetables  is 200g."),
-  new Food("Beans", "./img/Beans.jpg", "gram", {NVegetables:60}, [], ["exotic_vegetable"],"The daily recommended intake for vegetables  is 200g."),
-  new Food("Cauliflower", "./img/Cauliflower.jpg", "gram", {NVegetables:70}, [], ["exotic_vegetable"],"The daily recommended intake for vegetables  is 200g."),
-  new Food("Green/White Aspargus", "./img/Aspargus.jpg", "gram", {NVegetables:40}, [], ["exotic_vegetable"],"The daily recommended intake for vegetables  is 200g."),
-  new Food("Soybeans", "./img/Soybeans.jpg", "portion", {NVegetables:50, NLegumes:1}, ["soy"], ["vegetable", "legume"],"Eating Legumes at least once per week is recommended."),
-  new Food("Lentils", "./img/Lentils.jpg", "portion", {NVegetables:50, NLegumes:1}, [], ["vegetable", "legume"],"Eating Legumes at least once per week is recommended."),
-  new Food("Chickpeas", "./img/Chickpeas.jpg", "portion", {NVegetables:50, NLegumes:1}, [], ["exotic_vegetable", "legume"],"Eating Legumes at least once per week is recommended."),
-  new Food("Kidney beans", "./img/Kidney Beans.jpg", "portion", {NVegetables:50, NLegumes:1}, [], ["exotic_vegetable", "legume"],"Eating Legumes at least once per week is recommended."),
-  new Food("Black beans", "./img/Black Beans.jpg", "portion", {NVegetables:50, NLegumes:1}, [], ["exotic_vegetable", "legume"],"Eating Legumes at least once per week is recommended."),
+//Other Vegetables
+new Food("Sweet Potato", "./img/Sweet Potato.jpg", "gram", {NVegetables:130}, [], ["exotic_vegetable"],"The daily recommended intake for vegetables  is 200g."),
+new Food("Spinach", "./img/Spinach.jpg", "gram", {NVegetables:25}, [], ["exotic_vegetable"],"The daily recommended intake for vegetables  is 200g."),
+new Food("Cabbage", "./img/Cabbage.jpg", "gram", {NVegetables:50}, [], ["exotic_vegetable"],"The daily recommended intake for vegetables  is 200g."),
+new Food("Beans", "./img/Beans.jpg", "gram", {NVegetables:60}, [], ["exotic_vegetable"],"The daily recommended intake for vegetables  is 200g."),
+new Food("Cauliflower", "./img/Cauliflower.jpg", "gram", {NVegetables:70}, [], ["exotic_vegetable"],"The daily recommended intake for vegetables  is 200g."),
+new Food("Green/White Aspargus", "./img/Aspargus.jpg", "gram", {NVegetables:40}, [], ["exotic_vegetable"],"The daily recommended intake for vegetables  is 200g."),
+//legumes
+new Food("Soybeans", "./img/Soybeans.jpg", "portion", {NLegumes:1}, ["soy"], ["vegetable", "legume"],"Eating Legumes at least once per week is recommended."),
+new Food("Lentils", "./img/Lentils.jpg", "portion", {NLegumes:1}, [], ["vegetable", "legume"],"Eating Legumes at least once per week is recommended."),
+new Food("Chickpeas", "./img/Chickpeas.jpg", "portion", {NLegumes:1}, [], ["exotic_vegetable", "legume"],"Eating Legumes at least once per week is recommended."),
+new Food("Kidney beans", "./img/Kidney Beans.jpg", "portion", {NLegumes:1}, [], ["exotic_vegetable", "legume"],"Eating Legumes at least once per week is recommended."),
+new Food("Black beans", "./img/Black Beans.jpg", "portion", {NLegumes:1}, [], ["exotic_vegetable", "legume"],"Eating Legumes at least once per week is recommended."),
 
 //Products
 new Food("Brown Rice", "./img/Brown Rice.jpg", "gram", {NWholeGrain:90}, [], ["product"], "The daily recommended intake for whole grain products is 90g."),
@@ -58,11 +59,12 @@ new Food("Sauce/Dressing", "./img/Ready SauceDressing.jpg", "gram", {}, ["warnin
 new Food("Sweet Spread", "./img/Sweet Spread.jpg", "gram", {}, ["warning"], ["product"], "It is recommended to reduce suger intake." ),
 new Food("Peanut Butter", "./img/Peanut Butter.jpg", "portion", {NLegumes:1}, ["peanut"], ["product"], "Eating Legumes at least once per week is recommended."),
 new Food("Peanuts (salted)", "./img/Peanut salted.jpg", "portion", {NLegumes:1}, ["peanut", "warning"], ["product"], "Salt intake should remain below 6g per day. Eating Legumes at least once per week is recommended."),
+new Food("Soy sauce", "./img/Soy sauce.jpg", "portion", {NDairy:0}, ["soy","warning"], ["product"],"Soysauce is very high in salt, try to limit your salt intake."),
 
 
 //Legume only
 new Food("Other legumes", "./img/Other Legumes.jpg", "portion", {NVegetables:50, NLegumes:1}, [], ["legume"],"Eating Legumes at least once per week is recommended."),
-new Food("Peanut", "./img/Peanut.jpg", "portion", {NLegumes:1}, ["peanut"], ["legume"], "Eating Legumes at least once per week is recommended."),
+new Food("Peanut", "./img/Peanut.jpg", "portion", {NLegumes:1, NDairy:1}, ["peanut"], ["legume"], "Eating Legumes at least once per week is recommended."),
 
 
 
@@ -95,21 +97,19 @@ new Food("Cheese", "./img/Cheese.jpg", "portion", {NDairy:1}, ["animal"], ["dair
 new Food("Milk", "./img/Milk.jpg", "portion", {NDairy:1}, ["animal"], ["dairy"],"You should eat three portions of dairy a day."),
 new Food("Milk Powder", "./img/Milk Powder.jpg", "portion", {NDairy:1}, ["dairy"], ["dairy"],"You should eat dairy or a form of dairy replacements 3 times each day."),
 new Food("Plain Yogurt", "./img/Plain Yogurt.jpg", "portion", {NDairy:1}, ["animal"], ["dairy"],"You should eat three portions of dairy a day."),
-new Food("Egg", "./img/Egg.jpg", "portion", {NDairy:1, NB12:1}, ["animal","eggs"], ["dairy"], "You should eat three portions of dairy a day."),
 new Food("Fruit Yogurt", "./img/Fruit Yogurt.jpg", "portion", {NDairy:1}, ["animal","warning"], ["dairy"], "Pay attention to the sugar amount contained in many fruit yogurts"),
 
 //Dairy Replacement
-new Food("Casein", "./img/Casein.jpg", "portion", {NDairy:1}, [], ["dairyReplacement"], "You should eat three portions of dairy a day."),
+new Food("Casein", "./img/Casein.jpg", "portion", {NDairy:0}, [], ["dairyReplacement"], "Casein can not fully replace dairy intake."),
 new Food("Coconut Milk", "./img/Coconut Milk.jpg", "portion", {NDairy:1}, [], ["dairyReplacement"], "You should eat three portions of dairy a day."),
 new Food("Other Dairy Replacement (1 portion)", "./img/Other.jpg","gram", {NDairy:1},[],["dairyReplacement"], "You should eat three portions of dairy a day."),
 /*
 new Food("Casein", "./img/Casein.jpg", "portion", {NDairy:1}, [], ["dairyReplacement"]),
 new Food("Ice cream", "./img/Ice cream.jpg", "portion", {NDairy:1}, ["dairy"], ["dairy"],"You should eat dairy or a form of dairy replacements 3 times each day."),
-new Food("Soymilk", "./img/Soymilk.jpg", "portion", {NDairy:1}, ["soy"], ["dairy"],"You should eat dairy or a form of dairy replacements 3 times each day."),
-new Food("Soy sauce", "./img/Soy sauce.jpg", "portion", {NDairy:1}, ["soy"], ["dairy"],"You should eat dairy or a form of dairy replacements 3 times each day."),
-new Food("Coconut milk", "./img/Coconut milk.jpg", "portion", {NDairy:1}, ["dairy"], ["dairy"],"You should eat dairy or a form of dairy replacements 3 times each day."),
-new Food("Almond milk", "./img/Almond milk.jpg", "portion", {NDairy:1}, ["dairy"], ["dairy"],"You should eat dairy or a form of dairy replacements 3 times each day."),
-new Food("Miso", "./img/Miso.jpg", "portion", {NDairy:1}, ["dairy"], ["dairy"],"You should eat dairy or a form of dairy replacements 3 times each day."),
+new Food("Soymilk", "./img/Soymilk.jpg", "portion", {NDairy:1}, ["soy"], ["dairy", "warning"],"Try to limit your daily salt intake."),
+new Food("Coconut milk", "./img/Coconut milk.jpg", "portion", {NDairy:0}, ["dairy"], ["dairy"],"You should eat dairy or a form of dairy replacements 3 times each day."),
+new Food("Almond milk", "./img/Almond milk.jpg", "portion", {NDairy:0}, ["dairy", "warning"], ["dairy"],"Try to limit your daily salt intake."),
+new Food("Miso", "./img/Miso.jpg", "portion", {NDairy:0}, ["dairy", "warning"], ["dairy"],"Try to limit your daily salt intake."),
 */
 
 //Fish
@@ -150,12 +150,15 @@ new Food("Bacon", "./img/Bacon.jpg", "gram", {NB12:1}, ["warning", "meat", "anim
 new Food("B12 supplements", "./img/B12 Supplements.jpg", "portion", {NB12:1}, [], ["meatReplacement"]),
 //new Food("Other white meat", "./img/Other white meat.jpg", "gram", {NB12:1}, ["meat"], ["meat"],""),
 //new Food("Other read meat", "./img/Other read meat.jpg", "gram", {NB12:1}, ["warning", "meat"], ["meat"],"There is inconclusive evidence on negative health effects of red meat."),
+new Food("Egg", "./img/Egg.jpg", "portion", {NB12:1}, ["animal","eggs"], ["meat"], "Eggs deliver B12 and protein."),
+
+
 
 //Drinks
 new Food("Coffee", "./img/Coffee.jpg", "portion", {}, ["warning"], ["drink"],"It is not recommended to drink unfiltered coffee. Avoid drinking more than 5 cups a day because of caffeine."),
-new Food("Black tea", "./img/Black tea.jpg", "portion", {}, ["warning"], ["drink"],"Be aware that a cup of black tea contains about one quarter of the caffeine of a cup of coffee."),
+new Food("Black tea", "./img/Black tea.jpg", "portion", {NTea:1}, ["warning"], ["drink"],"Be aware that a cup of black tea contains about one quarter of the caffeine of a cup of coffee."),
 new Food("Green tea", "./img/Green tea.jpg", "portion", {NTea:1}, [], ["drink"],"At least 3 cups of tea every day is a healthy practice."),
-new Food("Other tea", "./img/Other tea.jpg", "portion", {NTea:1}, [], ["drink"],"At least 3 cups of tea every day is a healthy practice."),
+new Food("Other tea", "./img/Other tea.jpg", "portion", {}, [], ["drink"],"At least 3 cups of tea every day is a healthy practice."),
 new Food("Water", "./img/Water.jpg", "portion", {}, [], ["drink"],""),
 new Food("Fruit juice", "./img/Fruit juice.jpg", "portion", {}, ["warning"], ["drink"],"Try to minimize sugar intake."),
 new Food("Soft drinks", "./img/Soft drinks.jpg", "portion", {}, ["warning"], ["drink"],"Try to minimize sugar intake."),
@@ -174,6 +177,8 @@ new Food("Olive oil", "./img/Olive oil.jpg", "ml", {NOil:13.4}, [], ["oils"],"It
 new Food("Canola oil", "./img/Canola oil.jpg", "ml", {NOil:13.4}, [], ["oils"],"It is recommended to consume either 50 ml of native olive oil or an extra of 30g of nuts."),
 new Food("Sunflower oil", "./img/Sunflower oil.jpg", "ml", {NOil:13.4}, [], ["oils"],"It is recommended to consume either 50 ml of native olive oil or an extra of 30g of nuts."),
 new Food("Sesame oil", "./img/Sesame oil.jpg", "ml", {NOil:13.4}, [], ["oils"],"It is recommended to consume either 50 ml of native olive oil or an extra of 30g of nuts."),
+new Food("Coconut oil", "./img/Coconut oil.jpg", "ml", {NOil:13.4}, ["warning"], ["oils"],"Aim to replace coconut oil with native olive oil"),
+
 //new Food("Grapeseed oil", "./img/Grapeseed oil.jpg", "ml", {NOil:12}, [], ["oils"],"It is recommended to consume either 50 ml of native olive oil or an extra of 30g of nuts."),
 //new Food("Soybean oil", "./img/Soybean oil.jpg", "ml", {NOil:12}, ["soy"], ["oils"],"It is recommended to consume either 50 ml of native olive oil or an extra of 30g of nuts."),
 //new Food("Corn oil", "./img/Corn oil.jpg", "ml", {NOil:12}, [], ["oils"],"It is recommended to consume either 50 ml of native olive oil or an extra of 30g of nuts."),
@@ -181,25 +186,25 @@ new Food("Sesame oil", "./img/Sesame oil.jpg", "ml", {NOil:13.4}, [], ["oils"],"
 
 
 //previous examples
-  //relevantQuestionsTag (broader categories)
-    //products
+//relevantQuestionsTag (broader categories)
+  //products
 
-    //Vegetables
-    //drinks
-      //  new Food("banana", "none", {B12:0, Vegetables:0}, [], ["fruitsAndVeg?"]),
-  //  new Food("soy", "none", {B12:1, Vegetables:18}, [], ["fruitsAndVeg?", "200veg?", "meatReplacements?"]),
-    //meats
-  //  new Food("chicken",  "./img/chicken.png", {B12:1, Vegetables:0},  ["meat", "animal"], ["meat?"] ),
-  //  new Food("beef", "none", {B12:1, Vegetables:0}, ["meat", "animal"], ["meat?"]),
-    //dairy
-    //nuts and oils
-  //  new Food()
-    //drinks
+  //Vegetables
+  //drinks
+    //  new Food("banana", "none", {B12:0, Vegetables:0}, [], ["fruitsAndVeg?"]),
+//  new Food("soy", "none", {B12:1, Vegetables:18}, [], ["fruitsAndVeg?", "200veg?", "meatReplacements?"]),
+  //meats
+//  new Food("chicken",  "./img/chicken.png", {B12:1, Vegetables:0},  ["meat", "animal"], ["meat?"] ),
+//  new Food("beef", "none", {B12:1, Vegetables:0}, ["meat", "animal"], ["meat?"]),
+  //dairy
+  //nuts and oils
+//  new Food()
+  //drinks
 
 ]}
 var foodlist = newFoodlist()
 export default {
-    newFoodlist,
-    foodlist,
-    Food
+  newFoodlist,
+  foodlist,
+  Food
 }
