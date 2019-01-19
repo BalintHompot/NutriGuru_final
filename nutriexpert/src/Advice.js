@@ -30,10 +30,11 @@ class Food {
     }
 }
 const hardCodedWarningList = [
-  new Food("Coffee", "./img/Coffee.jpg", "portion", {}, ["warning"], ["drink"],"It is not recommended to drink unfiltered coffee. Avoid drinking more than 5 cups a day because of caffeine."),
   new Food("Beer", "./img/Beer.jpg", "portion", {}, ["warning"], ["drink"],"Reducing alcohol intake can greatly benefit your health."),
   new Food("Wine", "./img/Wine.jpg", "portion", {}, ["warning"], ["drink"],"Reducing alcohol intake can greatly benefit your health."),
-  new Food("Liquor", "./img/Liquor.jpg", "portion", {}, ["warning"], ["drink"],"Reducing alcohol intake can greatly benefit your health.")
+  new Food("Liquor", "./img/Liquor.jpg", "portion", {}, ["warning"], ["drink"],"Reducing alcohol intake can greatly benefit your health."),
+  new Food("Sweets", "./img/Sweets.jpg", "gram", {}, ["warning"], ["product"], "It is recommended to reduce sugar intake."),
+  new Food("Coffee", "./img/Coffee.jpg", "portion", {}, ["warning"], ["drink"],"It is not recommended to drink unfiltered coffee. Avoid drinking more than 5 cups a day because of caffeine.")
 ]
 
 class Advice extends Component {
@@ -92,7 +93,7 @@ class Advice extends Component {
 
         if(a.length == 0){
             var n = l
-            a = [new Food( n + " replacements", "./img/Other.jpg", "portion", {}, [], [], "Consuming " + n + " is essential for a healthy lifestyle. In case your diet or your allergies do not allow you to eat foods that contain it, you should take replacements")]
+            a = [new Food( n + " replacements", "./img/Other.jpg", "portion", {}, [], [], "Consuming " + n + " is essential for a healthy diet. In case your diet or your allergies do not allow you to consume it, seek out adequate replacements products.")]
         }
         this.setState({
             advisedFoodList: a,
@@ -142,7 +143,7 @@ class Advice extends Component {
 
         return(
             <div className = "mainwrapper">
-                
+
 
                 <div className = "advicebackground"></div>
 
@@ -155,7 +156,7 @@ class Advice extends Component {
                         <ul className = "advicegrid">
                             {foodls}
                         </ul>
-                    
+
                     </div>
 
                 </div>
@@ -169,10 +170,10 @@ class Advice extends Component {
                             {warnls}
                         </ul>
                     </div>
-                    
+
                 </div>
                 <button className = "restartbutton" onClick = {this.goToLoginPage}>Start again</button>
-                
+
                 {this.state.showPopup ?
                     <Popup
                         item={this.state.popUpFood}

@@ -11,31 +11,32 @@ class Popup extends React.Component {
           <div className='popup_inner' >
           <div className = 'popup_inner_text_container'>
             <h className = 'popupname'>{"Hello " + this.props.name + "!"}</h>
+            <p> NOTE: NutriGuru is <b>not</b> a substitute for professional medical advice.
+            </p>
             <p> After clicking through just a few simple questions, NutriGuru will provide you
-                with easy tips on how to achieve an even more healthy diet. NOTE: NutriGuru is not
-                a substitute for professional medical advice.
+                  with easy tips on how to achieve an even more healthy diet.
             </p>
-            <p>
-                Here a quick heads up:
-            </p>
-            <p>
-                1. You are presented with foods of different categories.
-                </p>
-                <p>
-                2. Per category, select the item(s) consumed in the past 24 hours. Sometimes the time span is one week.
-                </p>
-                <p>
-                3. The pictures approximately match the serving size.
-                </p>
-                <p>
-                4. You can select items multiple times.
-                </p>
-                <p>
-                5. You can select an item multiple times, in case you consumed a specific item several times
-                </p>
-                <p>
-                6. Left-bound will be a list of items selected.
-            </p>
+                  <p>
+                  1. You are presented with foods of different categories.
+                  </p>
+                  <p>
+                  2. Per category, select the item(s) consumed in the past 24 hours. Sometimes the time span is one week.
+                  </p>
+                  <p>
+                  3. The pictures approximately match the serving size.
+                  </p>
+                  <p>
+                  4. You can select items multiple times.
+                  </p>
+                  <p>
+                  5. You can select an item multiple times, in case you consumed a specific item several times
+                  </p>
+                  <p>
+                  6. Left-bound you can find a list of items selected.
+              </p>
+              <p>
+              For more information on healthy eating visit https://goo.gl/tzyYRw and goo.gl/ih9Mh2.
+              </p>
             </div>
           <button className = "details2" onClick={this.props.updateGlobals}>Let's go!</button>
           </div>
@@ -55,7 +56,6 @@ class Login extends Component {
                 lactose: false,
                 gluten : false,
                 eggs : false,
-                fish : false,
                 shellfish: false,
                 peanuts : false,
                 treenuts : false,
@@ -291,12 +291,6 @@ class Login extends Component {
                                 </label>
                                 </div>
                                 <div className="radio">
-                                <label>
-                                    <input type="radio" value="fish" name="fishName"
-                                                checked={this.state.selected["fish"]}
-                                                onChange={this.handleOptionChange} />
-                                    Fish
-                                </label>
                                 </div>
                                 <div className="radio">
                                 <label>

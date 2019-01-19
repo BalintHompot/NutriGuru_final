@@ -36,11 +36,12 @@ class InstructionsPopup extends React.Component {
         <div className='popup_inner' >
           <h1 className = 'popupname'>Instructions</h1>
 
-          <p className = 'fooddescription'> 
-          <p> After clicking through just a few simple questions, NutriGuru will provide you
-                with easy tips on how to achieve an even more healthy diet. NOTE: NutriGuru is not
-                a substitute for professional medical advice.
+          <p className = 'fooddescription'>
+          <p> NOTE: NutriGuru is <b>not</b> a substitute for professional medical advice.
             </p>
+          <p> After clicking through just a few simple questions, NutriGuru will provide you
+                with easy tips on how to achieve an even more healthy diet.
+                </p>
             <p>
                 1. You are presented with foods of different categories.
                 </p>
@@ -59,7 +60,11 @@ class InstructionsPopup extends React.Component {
                 <p>
                 6. Left-bound you can find a list of items selected.
             </p>
+            <p>
+            For more information on healthy eating visit https://goo.gl/tzyYRw and goo.gl/ih9Mh2.
+            </p>
              </p>
+
         <button className = "details2" onClick={this.props.close}>Got it!</button>
         </div>
       </div>
@@ -319,13 +324,13 @@ class MainScreen extends Component {
       this.lookForSpecificQuestion("NDairy")
     }
     if(askedGeneralQuestions == 5){
-      this.lookForSpecificQuestion("NFish") 
+      this.lookForSpecificQuestion("NFish")
       this.lookForSpecificQuestion("NLegumes")
     }
     if(askedGeneralQuestions == 6){
       this.lookForSpecificQuestion("NNuts")
       this.lookForSpecificQuestion("NWholeGrain")
-      
+
     }
     if(askedGeneralQuestions == 7){
       this.lookForSpecificQuestion("NTea")
