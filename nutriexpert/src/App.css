@@ -373,6 +373,25 @@
 
     
   }
+  .popup_inner_instructions {
+    font-family: var(--primaryFontFamily);
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    top: 25%;
+    bottom: 25%;
+    margin: auto;
+    background: white;
+    text-align: center;
+    border-radius: 2vmin;
+    height: 77vh;
+    border-style: solid;
+    border-width: 0.1vmin;
+    border-color: black;
+    padding: 3vmin;
+
+    
+  }
 
   .popup_inner_text_container{
     margin-top: 2vh;
@@ -1073,7 +1092,7 @@ border-radius: 50%;
   width: 50%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 30px;
+  margin-bottom: 10vh;
   border-radius: 25px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   z-index: 10;

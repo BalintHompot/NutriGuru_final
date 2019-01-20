@@ -41,7 +41,7 @@
     "electron-start": "electron .",
     "electron-dev": "concurrently \"BROWSER=none PORT=3000 yarn start\" \"wait-on http://localhost:3000 && electron .\"",
     "preelectron-pack": "yarn build",
-    "electron-pack": "npx build --x64 --macos --c.extraMetadata.main=build/electron.js --publish=never"
+    "electron-pack": "npx build --x64 --macos --win --c.extraMetadata.main=build/electron.js --publish=never"
   },
   "eslintConfig": {
     "extends": "react-app"

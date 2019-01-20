@@ -33,7 +33,7 @@ class InstructionsPopup extends React.Component {
   render() {
     return (
       <div className='popup'>
-        <div className='popup_inner' >
+        <div className='popup_inner_instructions' >
           <h1 className = 'popupname'>Instructions</h1>
 
           <p className = 'fooddescription'>
